@@ -1,32 +1,38 @@
-<div class="container">
-    <div class='row'>
-        <a class='btn btn-default' href='/'>< Home</a>
-    </div>
-    <div id="gallery" class="carousel slide" data-ride="false">
-        <div class="carousel-inner">
-            <% page.photos.forEach(function(photo, i){ %>
-            <div class="carousel-item <%if (i===0) {%>  active  <%}%>">
-                <img class="d-block w-100" src="<%- url_for(photo) %>" alt="<%- page.title %>">
-            </div>
-            <% }) %>
-        </div>
-        <a class="carousel-control-prev" href="#gallery" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#gallery" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-    <div class='row'>
+<div class="container mt-5">
+    <div class="row">
         <div class="col-sm">
-            <h1><%- page.title %></h1>
-            <div class='text-muted'>
-                <%= date(page.date, config.date_format) %>
+            <div id="gallery" class="carousel slide" data-ride="false">
+                <div class="carousel-inner">
+                    <% page.photos.forEach(function(photo, i){ %>
+                    <div class="carousel-item <% if (i === 0) { %>  active  <% } %>">
+                        <img class="d-block w-100" src="<%- url_for(photo) %>" alt="<%- page.title %>">
+                    </div>
+                    <% }) %>
+                </div>
+                <a class="carousel-control-prev" href="#gallery" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#gallery" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
-            <a href="<%= page.ravelry%>">Ravelry</a>
-            <%- page.content %>
+        </div>
+        <div class="col-sm">
+            <div class='row'>
+                <div class="col-sm">
+                    <h1><%- page.title %></h1>
+                    <div class='text-muted'>
+                        <%= date(page.date, config.date_format) %>
+                    </div>
+                    <ul class="list-unstyled">
+                        <li class="col-sm"><i class="fab fa-ravelry"></i><a href="<%= page.ravelry %>"> Ravelry</a></li>
+                        <li class="col-sm"><i class="fab fa-instagram"></i><a href="<%= page.instagramtag %>"> Instagram</a></li>
+                    </ul>
+                    <%- page.content %>
+                </div>
+            </div>
         </div>
     </div>
 </div>

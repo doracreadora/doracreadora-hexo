@@ -26,7 +26,6 @@ body {
 }
 
 .album {
-    min-height: 50rem; /* Can be removed; just added for demo purposes */
     padding-top: 3rem;
     padding-bottom: 3rem;
     /*background-color: #f7f7f7;*/
@@ -78,7 +77,7 @@ footer p {
 }
 
 .hovereffect:hover .overlay {
-    background-color: rgba(48, 152, 157, 0.4);
+    background-color: transparent;
 }
 
 .hovereffect img {
@@ -95,17 +94,17 @@ footer p {
     font-size: 17px;
     padding: 10px;
     background: rgba(0, 0, 0, 0.6);
-    -webkit-transform: translateY(174px);
-    -ms-transform: translateY(174px);
-    transform: translateY(174px);
+    -webkit-transform: translateY(150px);
+    -ms-transform: translateY(150px);
+    transform: translateY(150px);
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
 }
 
 .hovereffect:hover h2 {
-    -webkit-transform: translateY(45px);
-    -ms-transform: translateY(45px);
-    transform: translateY(45px);
+    -webkit-transform: translateY(25px);
+    -ms-transform: translateY(25px);
+    transform: translateY(25px);
 }
 
 /*.hovereffect a.info {*/
