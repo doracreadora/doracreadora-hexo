@@ -1,9 +1,9 @@
 ---
-title: Sloth
-thumbnail: images/sloth.jpg
+title: Gran
+thumbnail: https://scontent-arn2-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/22580614_1759732477661304_1436977567683837952_n.jpg
 photos:
-- http://res.cloudinary.com/dqtv0snuu/image/upload/archive/P9110061-e1315674076868.jpg
-- http://res.cloudinary.com/dqtv0snuu/image/upload/archive/P51301021-e1315673445283.jpg
+- https://scontent-arn2-1.cdninstagram.com/t51.2885-15/e35/22580614_1759732477661304_1436977567683837952_n.jpg
+- https://scontent-arn2-1.cdninstagram.com/t51.2885-15/e35/22500262_1637399919644175_7965848841431810048_n.jpg
 ---
 Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 

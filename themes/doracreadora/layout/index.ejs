@@ -15,16 +15,18 @@
         <div class="container">
             <div class='row'>
                 <% page.posts.each(function(post){ %>
-                <div class="card">
-                    <div class="hovereffect">
-                        <img class="img-responsive"
-                             src="<%- post.thumbnail %>"
-                             alt="<%= post.title %> - <%= date(post.date, config.date_format) %>">
-                        <div class="overlay">
-                            <h2><%= post.title %></h2>
-                            <p>
-                                <a class="info" href="<%= url_for(post.path) %>">Gå til</a>
-                            </p>
+                <div class="col-4">
+                    <div class="card">
+                        <div class="hovereffect">
+                            <img class="img-responsive"
+                                 src="<%- post.thumbnail %>"
+                                 alt="<%= post.title %> - <%= date(post.date, config.date_format) %>">
+                            <div class="overlay">
+                                <h2><%= post.title %></h2>
+                                <p>
+                                    <a class="info" href="<%= url_for(post.path) %>">Gå til</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
