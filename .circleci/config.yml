@@ -23,5 +23,5 @@ jobs:
       - run: hexo generate
       - run: git config --global user.email "dorotea.nenadovic@gmail.com"
       - run: git config --global user.name "Dorotea Nenadovic"
-      - run: echo abbsnabb.com > public/CNAME
+      - run: echo doracreadora.com > public/CNAME
       - run: hexo deploy
