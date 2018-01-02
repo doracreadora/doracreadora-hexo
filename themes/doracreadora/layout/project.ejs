@@ -23,9 +23,10 @@
             <div class='row'>
                 <div class="col-sm">
                     <h1><%- page.title %></h1>
-                    <div class='text-muted'>
-                        <%= date(page.date, config.date_format) %>
-                    </div>
+                    <ul class="list-unstyled">
+                        <li class="col-sm"><i class="fab fa-ravelry"></i><a href="<%= page.ravelry %>"> Ravelry</a></li>
+                        <li class="col-sm"><i class="fab fa-instagram"></i><a href="<%= page.instagramtag %>"> Instagram</a></li>
+                    </ul>
                     <%- page.content %>
                 </div>
             </div>
