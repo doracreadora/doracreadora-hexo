@@ -7,4 +7,6 @@ layout: about
 
 Hi, I'm Dora, a Croat in Oslo nurturing my inner grandma.
 
+Probably a couple of more sentences.
+
 
