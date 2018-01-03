@@ -24,8 +24,13 @@
                 <div class="col-sm">
                     <h1><%- page.title %></h1>
                     <ul class="list-unstyled">
+                        <% if (page.ravelry) { %>
                         <li class="col-sm"><i class="fab fa-ravelry"></i><a href="<%= page.ravelry %>"> Ravelry</a></li>
-                        <li class="col-sm"><i class="fab fa-instagram"></i><a href="<%= page.instagramtag %>"> Instagram</a></li>
+                        <% } %>
+                        <% if (page.instagram) { %>
+                        <li class="col-sm"><i class="fab fa-instagram"></i><a href="<%= page.instagram %>">
+                                Instagram</a></li>
+                        <% } %>
                     </ul>
                     <%- page.content %>
                 </div>
