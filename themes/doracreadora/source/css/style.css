@@ -25,6 +25,10 @@ body {
     max-width: 40rem;
 }
 
+.img-circle {
+    border-radius: 50%;
+}
+
 .album {
     padding-top: 3rem;
     padding-bottom: 3rem;
