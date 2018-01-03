@@ -1,51 +1,49 @@
 <div class="text-muted">
-    <div class="container-fluid">
+    <div class="container">
         <div class="album">
-            <div class="container">
-                <h2 id="myprojects">My projects</h2>
-                <div class='row'>
-                    <% site.pages.filter(function(page) {return page.layout === 'project'})
-                    .each(function(post){ %>
-                    <div class="col-sm-4">
-                        <div class="card">
-                            <div class="hovereffect">
-                                <a href="<%= url_for(post.path) %>">
-                                    <img class="img-responsive"
-                                         src="<%- post.thumbnail %>"
-                                         alt="<%= post.title %> - <%= date(post.date, config.date_format) %>">
-                                    <div class="overlay">
-                                        <h2><%= post.title %></h2>
-                                    </div>
-                                </a>
-                            </div>
+            <h2 id="myprojects">My projects</h2>
+            <div class='row'>
+                <% site.pages.filter(function (page) {
+                    return page.layout === 'project'
+                })
+                .each(function(post){ %>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="hovereffect">
+                            <a href="<%= url_for(post.path) %>">
+                                <img class="img-responsive"
+                                     src="<%- post.thumbnail %>"
+                                     alt="<%= post.title %> - <%= date(post.date, config.date_format) %>">
+                                <div class="overlay">
+                                    <h2><%= post.title %></h2>
+                                </div>
+                            </a>
                         </div>
                     </div>
-                    <% }) %>
                 </div>
+                <% }) %>
             </div>
         </div>
     </div>
 
     <% if (page.posts.length > 1) { %>
-    <div class="container-fluid">
+    <div class="container">
         <div class="album">
-            <div class="container">
-                <h2 id="blog">Blog</h2>
-                <div class='row'>
-                    <% page.posts.each(function(post){ %>
-                    <div class="col-sm-4">
-                        <a href="<%= url_for(post.path) %>">
-                            <div class="card">
-                                <img class="card-img-top" src="<%- post.thumbnail %>" alt="<%= post.title %>">
-                                <div class="card-body">
-                                    <h5 class="card-title"><%= post.title %></h5>
-                                    <p class="card-text"><%= post.excerpt %></p>
-                                </div>
+            <h2 id="blog">Blog</h2>
+            <div class='row'>
+                <% page.posts.each(function(post){ %>
+                <div class="col-sm-4">
+                    <a href="<%= url_for(post.path) %>">
+                        <div class="card">
+                            <img class="card-img-top" src="<%- post.thumbnail %>" alt="<%= post.title %>">
+                            <div class="card-body">
+                                <h5 class="card-title"><%= post.title %></h5>
+                                <p class="card-text"><%= post.excerpt %></p>
                             </div>
-                        </a>
-                    </div>
-                    <% }) %>
+                        </div>
+                    </a>
                 </div>
+                <% }) %>
             </div>
         </div>
     </div>
@@ -54,16 +52,20 @@
     <div class="container">
         <h2 id="aboutme">Who Am I?</h2>
 
-        <% site.pages.filter(function(page) {console.log(page.path); return page.path === 'about/index.html'}).each(function(page) { %>
-            <%- markdown(page.content) %>
+        <% site.pages.filter(function (page) {
+            console.log(page.path);
+            return page.path === 'about/index.html'
+        }).each(function(page) { %>
+        <%- markdown(page.content) %>
         <% }) %>
-
 
     </div>
 
     <div class="container">
         <h2 id="contact">Contact Me</h2>
-        <% site.pages.filter(function(page) {return page.path === 'contact/index.html'}).each(function(page) { %>
+        <% site.pages.filter(function (page) {
+            return page.path === 'contact/index.html'
+        }).each(function(page) { %>
         <%- markdown(page.content) %>
         <% }) %>
     </div>
