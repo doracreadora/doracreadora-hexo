@@ -38,7 +38,7 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
+  enable: false
   line_number: true
   auto_detect: false
   tab_replace:
@@ -79,3 +79,8 @@ theme: doracreadora
 deploy:
   type: git
   repo: git@github.com:doracreadora/doracreadora.github.io.git
+
+social:
+  instagram: https://www.instagram.com/dora_creadora/
+  pinterest: https://no.pinterest.com/doroti/
+  ravelry: https://www.ravelry.com/designers/dora-creadora

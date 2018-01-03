@@ -51,22 +51,48 @@
 
     <div class="container">
         <h2 id="aboutme">Who Am I?</h2>
-
-        <% site.pages.filter(function (page) {
-            console.log(page.path);
-            return page.path === 'about/index.html'
-        }).each(function(page) { %>
-        <%- markdown(page.content) %>
-        <% }) %>
-
+        <div class="row">
+            <div class="col-sm-4">
+                <% site.pages.filter(function (page) {
+                    return page.path === 'about/index.html'
+                }).each(function(page) { %>
+                <img src="<%- page.thumbnail %>" alt="<%= page.title %>">
+                <% }) %>
+            </div>
+            <div class="col-sm-4">
+                <% site.pages.filter(function (page) {
+                    return page.path === 'about/index.html'
+                }).each(function(page) { %>
+                <%- markdown(page.content) %>
+                <% }) %>
+            </div>
+            <div id="contact" class="col-sm-4">
+                <div class="social container" style="font-size: 2em; color: black;">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <a role="button" href="<%= config.social.instagram %>" class="btn btn-light" style="font-size: 1.2em">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                        <div class="col-sm-3">
+                            <a role="button" href="<%= config.social.ravelry %>" class="btn btn-light" style="font-size: 1.2em">
+                                <i class="fab fa-ravelry"></i>
+                            </a>
+                        </div>
+                        <div class="col-sm-3">
+                            <a role="button" href="<%= config.social.pinterest %>" class="btn btn-light" style="font-size: 1.2em; color: rgb(189, 8, 28);">
+                                <i class="fab fa-pinterest-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <% site.pages.filter(function (page) {
+                    return page.path === 'contact/index.html'
+                }).each(function(page) { %>
+                <%- markdown(page.content) %>
+                <% }) %>
+            </div>
+        </div>
     </div>
 
-    <div class="container">
-        <h2 id="contact">Contact Me</h2>
-        <% site.pages.filter(function (page) {
-            return page.path === 'contact/index.html'
-        }).each(function(page) { %>
-        <%- markdown(page.content) %>
-        <% }) %>
-    </div>
 </div>
