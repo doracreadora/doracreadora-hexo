@@ -3,5 +3,4 @@ title: Contact me
 layout: about
 ---
 
-Hook up on social media!
-
+You can find me here too.
