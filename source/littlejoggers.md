@@ -6,6 +6,7 @@ thumbnail: http://res.cloudinary.com/dqtv0snuu/image/upload/v1533064611/doracrea
 photos:
 - http://res.cloudinary.com/dqtv0snuu/image/upload/v1533064611/doracreadora/littlejoggers_full.jpg
 instagram: https://www.instagram.com/p/BbRVMOLnGTL
+ravelry: https://www.ravelry.com/patterns/library/little-joggers
 ---
 
 Little Joggers
